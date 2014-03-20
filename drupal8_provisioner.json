@@ -1,8 +1,12 @@
 {
+  "variables": {
+    "api_key": "",
+    "client_id": ""
+  },
   "builders": [{
     "type": "digitalocean",
-    "api_key": "",
-    "client_id": "",
+    "api_key": "{{user `api_key`}}",
+    "client_id": "{{user `client_id`}}",
     "snapshot_name": "exmaple_provisioned{{timestamp}}",
     "droplet_name": "exmapleprovisioned{{timestamp}}",
     "region_id": 4,
