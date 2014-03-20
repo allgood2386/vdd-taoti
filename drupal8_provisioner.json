@@ -1,0 +1,21 @@
+{
+  "builders": [{
+    "type": "digitalocean",
+    "api_key": "",
+    "client_id": "",
+    "snapshot_name": "exmaple_provisioned{{timestamp}}",
+    "droplet_name": "exmapleprovisioned{{timestamp}}",
+    "region_id": 4,
+    "image_id": 1420643
+  }],
+  "provisioners": [
+    {
+      "type": "chef-solo",
+      "cookbook_paths":
+      [
+        "cookbooks/core",
+        "cookbooks/site"
+      ]
+    }
+  ]
+}
