@@ -17,9 +17,12 @@
       "type": "chef-solo",
       "cookbook_paths":
       [
+        "cookbooks/site",
         "cookbooks/core",
-        "cookbooks/site"
-      ]
+        "cookbooks/custom"
+      ],
+      "execute_command": "{{if .Sudo}}sudo {{end}}chef-solo --no-color -c {{.ConfigPath}} -j config.json",
+      "roles_path": "roles"
     }
   ]
 }
